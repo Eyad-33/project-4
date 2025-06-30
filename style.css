@@ -1,0 +1,167 @@
+@import url('https://fonts.googleapis.com/css2?family=Ubuntu&display=swap');
+
+/* General and body Settings */
+* {
+  font-family: 'Ubuntu', sans-serif;
+  color: white;
+  padding: 0;
+  margin: 0;
+  box-sizing: border-box;
+}
+
+a {
+  text-decoration: none;
+  text-transform: capitalize;
+}
+
+body {
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  min-height: 100vh;
+  padding: 20px;
+  background-image: linear-gradient(to right, black, rgba(14, 14, 120, 0.867));
+}
+
+/* Container */
+.container {
+  width: 100%;
+  max-width: 1400px;
+  min-height: 90vh;
+  display: flex;
+  flex-direction: column;
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.649), rgba(18, 18, 57, 0.486)), 
+                    url(https://ca-times.brightspotcdn.com/dims4/default/c1a61d9/2147483647/strip/true/crop/3840x2160+0+0/resize/1200x675!/format/webp/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F03%2F0d%2F44d557194a8db3da6f4536cc2f30%2Favtr-226.jpg);
+  border-radius: 10px;
+  background-size: cover;
+  background-position: center;
+  background-repeat: no-repeat;
+  position: relative;
+  overflow: hidden;
+}
+
+.container:hover {
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.649), rgba(0, 0, 0, 0.486)), 
+                    url(https://ca-times.brightspotcdn.com/dims4/default/c1a61d9/2147483647/strip/true/crop/3840x2160+0+0/resize/1200x675!/format/webp/quality/80/?url=https%3A%2F%2Fcalifornia-times-brightspot.s3.amazonaws.com%2F03%2F0d%2F44d557194a8db3da6f4536cc2f30%2Favtr-226.jpg);
+}
+
+/* Header */
+header {
+  width: 100%;
+  padding: 20px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  flex-wrap: wrap;
+  gap: 20px;
+}
+
+ul {
+  list-style: none;
+  display: flex;
+  gap: 20px;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+
+li:hover {
+  border-bottom: 3px solid white;
+  cursor: pointer;
+}
+
+.logo {
+  text-transform: uppercase;
+  font-size: clamp(24px, 4vw, 30px);
+  font-style: italic;
+}
+
+/* Content */
+.content {
+  width: 90%;
+  max-width: 600px;
+  padding: 20px;
+  margin: auto;
+  position: relative;
+}
+
+h1 {
+  font-size: clamp(40px, 8vw, 80px);
+  text-transform: uppercase;
+  line-height: 1.1;
+  margin-bottom: 20px;
+}
+
+p {
+  width: 100%;
+  max-width: 400px;
+  margin-bottom: 30px;
+  font-size: clamp(16px, 2vw, 18px);
+}
+
+button {
+  color: black;
+  font-size: clamp(18px, 2vw, 24px);
+  border-radius: 30px;
+  height: 50px;
+  min-width: 160px;
+  background-image: linear-gradient(150deg, rgb(251, 78, 78), rgb(59, 59, 255));
+  border: none;
+  transition: all 0.3s ease;
+  cursor: pointer;
+  padding: 0 20px;
+}
+
+button:hover {
+  background-image: linear-gradient(90deg, rgb(251, 78, 78), rgb(59, 59, 255));
+  transform: scale(1.05);
+}
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  body {
+    padding: 10px;
+  }
+  
+  .container {
+    min-height: 95vh;
+  }
+  
+  header {
+    flex-direction: column;
+    padding: 10px;
+  }
+  
+  ul {
+    width: 100%;
+    gap: 15px;
+  }
+  
+  .content {
+    text-align: center;
+    margin: 20px auto;
+  }
+  
+  p {
+    margin: 0 auto 30px;
+  }
+  
+  .btn {
+    display: flex;
+    justify-content: center;
+  }
+}
+
+@media (min-width: 1600px) {
+  .container {
+    max-width: 1600px;
+    min-height: 80vh;
+  }
+  
+  .content {
+    max-width: 700px;
+  }
+  
+  h1 {
+    font-size: 100px;
+  }
+}
